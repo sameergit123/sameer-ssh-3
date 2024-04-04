@@ -573,10 +573,105 @@ console.log(text)
 
 ```
 
+#                                                         JAVASCRIPT ARRAYS                                     
+
+An array is a special variable, which can hold more than one value:
+
+``` bash
+const cars = ["Saab", "Volvo", "BMW"];
+console.log(cars);
+
+```
+
+**Using the JavaScript Keyword new**
+
+The two examples above do exactly the same.
+
+There is no need to use new Array().
+
+For simplicity, readability and execution speed, use the array literal method.
+
+```bash
+const cars = new Array("Saab", "Volvo", "BMW");
+console.log(Cars)
+```
+
+**Accessing Array Elements**
+
+```bash
+const cars = ["Saab", "Volvo", "BMW"];
+console.log (cars[0]);
+```
+
+**changing an Array Elements**
+
+```bash
+const cars = ["saab", "volvo", "BMW"];
+let cars[0] = Toyota;
+console.log(cars);
+```
+**converting an Array to String**
+
+The JavaScript method toString() converts an array to a string of (comma separated) array values.
+
+```bash
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+frutits1 = fruits.toString();
+console.log(fruits1)
+```
+
+**Access the Full Array**
 
 
+With JavaScript, the full array can be accessed by referring to the array name:
+
+```bash
+const cars = ["Saab", "Volvo", "BMW"];
+console.log(cars);
+```
 
 
+**Arrays are Objects**
+
+Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for array.
+```bash
+const person = ["John", "Doe", 46];
+person1 = person[0];
+console.log(person1)
+```
+
+**The length Property**
+
+The length property of an array returns the length of an array (the number of array elements).
 
 
+```bash
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruits.length;
+console.log(size);
+```
+
+**Accessing the First Array Element**
+
+```bash
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+first = fruits[0];
+console.log(first)
+```
+
+**Accessing the Last Array Element**
+
+```bash
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+last = fruits[fruits.length -1];
+console.log(last);
+```
+
+**Adding Array Elements**
+
+The easiest way to add a new element to an array is using the push() method:
+
+const fruits = ["Banana", "Orange", "Apple"];
+fruits.push("lemon");
+console.log(fruits);
 
