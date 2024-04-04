@@ -756,3 +756,104 @@ The instanceof operator returns true if an object is created by a given construc
 const fruits = ["Banana", "Orange", "Apple"];
 fruits instanceof Array;
 ```
+
+#                                                          ARRAY METHODS
+
+
+**Here are the basic array methods along with simple code examples and brief descriptions:**
+
+**Array length:**
+
+const array = [1, 2, 3];
+console.log(array.length); // Outputs: 3
+Description: Returns the number of elements in the array.
+
+**Array toString():**
+
+
+const array = [1, 2, 3];
+console.log(array.toString()); // Outputs: "1,2,3"
+Description: Converts the array to a string, joining the elements with commas.
+
+**Array at(): (Note: There's no at() method in JavaScript arrays.)**
+
+**Array join():**
+
+
+const array = [1, 2, 3];
+console.log(array.join('-')); // Outputs: "1-2-3"
+Description: Joins all elements of the array into a single string using the specified separator.
+
+**Array pop():**
+
+
+const array = [1, 2, 3];
+const poppedElement = array.pop();
+console.log(array); // Outputs: [1, 2]
+console.log(poppedElement); // Outputs: 3
+Description: Removes the last element from the array and returns that element.
+
+**Array push():**
+
+
+const array = [1, 2, 3];
+array.push(4);
+console.log(array); // Outputs: [1, 2, 3, 4]
+Description: Adds one or more elements to the end of the array and returns the new length of the array.
+
+**Array unshift():**
+
+
+const array = [2, 3];
+array.unshift(1);
+console.log(array); // Outputs: [1, 2, 3]
+Description: Adds one or more elements to the beginning of the array and returns the new length of the array.
+
+**Array delete(): (Note: delete is an operator, not a method specifically for arrays.)**
+
+**Array concat():**
+
+
+const array1 = [1, 2];
+const array2 = [3, 4];
+const concatenatedArray = array1.concat(array2);
+console.log(concatenatedArray); // Outputs: [1, 2, 3, 4]
+Description: Concatenates the arrays or values provided as arguments, returning a new array.
+
+**Array copyWithin():**
+
+
+const array = [1, 2, 3, 4, 5];
+array.copyWithin(0, 3);
+console.log(array); // Outputs: [4, 5, 3, 4, 5]
+Description: Copies a sequence of array elements within the array, overwriting the existing elements.
+
+**Array flat():**
+
+
+const nestedArray = [1, [2, 3], [4, [5]]];
+const flattenedArray = nestedArray.flat();
+console.log(flattenedArray); // Outputs: [1, 2, 3, 4, [5]]
+Description: Flattens nested arrays to the specified depth or completely if no depth is provided.
+
+**Array splice():**
+
+
+const array = [1, 2, 3, 4, 5];
+const removedElements = array.splice(1, 2);
+console.log(array); // Outputs: [1, 4, 5]
+console.log(removedElements); // Outputs: [2, 3]
+Description: Adds or removes elements from the array, returning the removed elements.
+
+**Array toSpliced(): (Note: There's no toSpliced() method in JavaScript arrays.)**
+
+**Array slice():**
+
+const array = [1, 2, 3, 4, 5];
+const slicedArray = array.slice(2);
+console.log(slicedArray); // Outputs: [3, 4, 5]
+Description: Extracts a section of the array and returns a new array containing the extracted elements.
+
+
+
+
