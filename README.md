@@ -855,5 +855,234 @@ console.log(slicedArray); // Outputs: [3, 4, 5]
 Description: Extracts a section of the array and returns a new array containing the extracted elements.
 
 
+#                                                      JAVASCRIPT ARRAY SEARCH
+
+Array indexOf()
+Array lastIndexOf()
+Array includes()
+Array findIndex()
+Array findLast()
+Array findLastIndex()
+
+**Array indexOf()**
+
+The indexOf() method searches an array for an element value and returns its position.
+
+```bash
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.indexOf("Apple") ;
+console.log(let position)
+```
+
+Array.indexOf() returns -1 if the item is not found.
+
+If the item is present more than once, it returns the position of the first occurrence.
+
+**Array lastIndexOf()**
+
+Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+
+```bash
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.lastIndexOf("Apple") ;
+console.log(position)
+```
+
+
+**JavaScript Array includes()**
+
+Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+
+```bash
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.includes("Mango");
+console.log(fruit)
+```
+
+**JavaScript Arrayfind()**
+
+JavaScript Array find()
+The find() method returns the value of the first array element that passes a test function.
+
+```bash
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(number => number === 20);
+console.log(first);
+
+```
+
+
+**JavaScript Array findLast() Method**
+
+ES2023 added the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+```bash
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let high = temp.findLast(x => x > 40);
+console.log(high)
+```
+**JavaScript Array findLastIndex() Method**
+
+The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+```bash
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let pos = temp.findLastIndex(x => x > 40);
+console.log(pos)
+```
+#                                                      JAVASCRIPT SORTING ARRAYS
+
+Alpabetic Sort
+Array sort()
+Array reverse()
+Array toSorted()
+Array toReversed()
+Sorting Objects
+
+Numeric Sort
+Random Sort
+Math.min()
+Math.max()
+Home made Min()
+Home made Max()
+
+
+ALPHABETIC SORT
+
+**ARRAY SORT()**
+
+The sort() method sorts an array alphabetically.
+
+```bash
+ const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.sort()
+console.log(fruit)
+```
+**Reversing an Array**
+
+The reverse() method reverses the elements in an array:
+
+```bash
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.reverse();
+console.log(fruit)
+```
+
+**Numeric sort**
+
+```bash
+const points = [40, 100, 1, 5, 25, 10];
+console.log(points) 
+
+asscendigOrder = points.sort(function(a, b){return a - b});
+console.log(points)
+```
+
+**The Compare Function**
+The purpose of the compare function is to define an alternative sort order.
+
+The compare function should return a negative, zero, or positive value, depending on the arguments:
+
+function(a, b){return a - b}
+When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.
+
+If the result is negative, a is sorted before b.
+
+If the result is positive, b is sorted before a.
+
+If the result is 0, no changes are done with the sort order of the two values.
+
+Example:
+
+The compare function compares all the values in the array, two values at a time (a, b).
+
+When comparing 40 and 100, the sort() method calls the compare function(40, 100).
+
+The function calculates 40 - 100 (a - b), and since the result is negative (-60),  the sort function will sort 40 as a value lower than 100.
+
+You can use this code snippet to experiment with numerically and alphabetically sorting:
+
+```bash
+<button onclick="myFunction1(points)">Sort Alphabetically</button>
+<button onclick="myFunction2(points)">Sort Numerically</button>
+
+<p id="demo"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points;
+
+function myFunction1(arr) {
+  arr.sort();
+  document.getElementById("demo").innerHTML = arr;
+}
+
+function myFunction2(arr) {
+  arr.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = arr;
+}
+
+```
+**Using Math.min() on an Array**
+
+You can use Math.min.apply to find the lowest number in an array:
+
+```bash
+
+const points = [40, 100, 1, 5, 25, 10];
+const smallestNumber = myArrayMin(points);
+console.log(smallestNumber);
+
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+
+```
+**Using Math.max() on an Array**
+
+You can use Math.max.apply to find the highest number in an array:
+
+```bash
+const points = [40, 100, 1, 5, 25, 10];
+const largestNumber = myArrayMax(points);
+console.log(largestNumber);
+
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
