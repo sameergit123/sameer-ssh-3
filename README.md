@@ -1052,6 +1052,135 @@ function myArrayMax(arr) {
 
 ```
 
+#                                                       JAVASCRIPT ARRAY ITERATION
+
+**Array forEach**
+
+```BASH
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(number => {
+    console.log(number);
+});
+```
+Explanation: forEach iterates over each element of the array and executes a provided function for each element. In this case, it logs each number in the array to the console.
+
+**Array map():**
+
+```BASH
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(number => {
+    return number * 2;
+});
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+```
+Explanation: map creates a new array by applying a function to each element of the original array. Here, it doubles each number in the array.
+
+**Array flatMap():**
+
+```BASH
+const numbers = [1, 2, 3];
+const doubledAndFlattened = numbers.flatMap(number => {
+    return [number, number * 2];
+});
+console.log(doubledAndFlattened); // Output: [1, 2, 2, 4, 3, 6]
+```
+Explanation: flatMap is like map, but it flattens the result into a new array. Here, it doubles each number in the array and flattens the result.
+
+**Array filter():**
+```BASH
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(number => {
+    return number % 2 === 0;
+});
+console.log(evenNumbers); // Output: [2, 4]
+```
+Explanation: filter creates a new array with only the elements that pass a test implemented by the provided function. In this example, it filters out the even numbers.
+
+**Array reduce():**
+```BASH
+
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0);
+console.log(sum); // Output: 15
+```
+Explanation: reduce applies a function against an accumulator and each element in the array to reduce it to a single value. Here, it calculates the sum of all numbers in the array.
+
+**Array reduceRight():**
+```BASH
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduceRight((accumulator, currentValue) => {
+    return accumulator - currentValue;
+});
+console.log(sum); // Output: -5
+```
+Explanation: reduceRight works similarly to reduce, but it processes the array from right to left.
+
+**Array every():**
+```BASH
+
+const numbers = [1, 2, 3, 4, 5];
+const allPositive = numbers.every(number => {
+    return number > 0;
+});
+console.log(allPositive); // Output: true
+```
+Explanation: every tests whether all elements in the array pass the provided function. Here, it checks if all numbers in the array are positive.
+
+**Array some():**
+```BASH
+const numbers = [1, 2, 3, 4, 5];
+const hasNegative = numbers.some(number => {
+    return number < 0;
+});
+console.log(hasNegative); // Output: false
+```
+Explanation: some tests whether at least one element in the array passes the provided function. Here, it checks if there are any negative numbers in the array.
+
+**Array from():**
+
+```BASH
+const arrayLike = {0: 'a', 1: 'b', 2: 'c', length: 3};
+const newArray = Array.from(arrayLike);
+console.log(newArray); // Output: ['a', 'b', 'c']
+```
+Explanation: from creates a new, shallow-copied array instance from an array-like or iterable object. Here, it converts an array-like object into a proper array.
+
+**Array keys():**
+
+```BASH
+const numbers = [1, 2, 3];
+const iterator = numbers.keys();
+for (const key of iterator) {
+    console.log(key);
+}
+```
+Explanation: keys returns a new Array Iterator object that contains the keys for each index in the array. Here, it logs the keys (indices) of the array.
+
+**Array entries():**
+
+
+```BASH
+const numbers = ['a', 'b', 'c'];
+const iterator = numbers.entries();
+for (const [index, value] of iterator) {
+    console.log(index, value);
+}
+```
+Explanation: entries returns a new Array Iterator object that contains the key/value pairs for each index in the array. Here, it logs the index and value of each element in the array.
+
+**Array Spread (...):**
+
+```BASH
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const mergedArray = [...array1, ...array2];
+console.log(mergedArray); // Output: [1, 2, 3, 4, 5, 6]
+```
+Explanation: Spread syntax (...) allows an iterable (like an array) to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. Here, it merges two arrays into one.
+
+
 
 
 
