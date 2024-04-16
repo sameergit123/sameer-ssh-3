@@ -1180,7 +1180,7 @@ console.log(mergedArray); // Output: [1, 2, 3, 4, 5, 6]
 ```
 Explanation: Spread syntax (...) allows an iterable (like an array) to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. Here, it merges two arrays into one.
 
-#                                 JAVASCRIPT DATES
+#                                                             JAVASCRIPT DATES
 
 ***Creating Date Objects
 Date objects are created with the new Date() constructor.
@@ -1217,7 +1217,6 @@ console.log(d);
 ```
 **Using 6, 4, 3, or 2 Numbers**
 
-6 numbers specify year, month, day, hour, minute, second:
 
 ```bash
 const d = new Date(2018, 11, 24, 10, 33, 30);
@@ -1360,6 +1359,6 @@ T**he setFullYear() Method**
 The setFullYear() method sets the year of a date object. In this example to 2020:
 
 ```bash
-console.log(const d = new Date());
-d.setFullYear(2020);
+const d = new Date();
+console.log(d.setFullYear(2020));
 ```
