@@ -1354,7 +1354,7 @@ setMonth()	                    Set the month (0-11)
 setSeconds()	                  Set the seconds (0-59)
 setTime()	                      Set the time (milliseconds since January 1, 1970)
 
-T**he setFullYear() Method**
+**The setFullYear() Method**
 
 The setFullYear() method sets the year of a date object. In this example to 2020:
 
@@ -1362,3 +1362,259 @@ The setFullYear() method sets the year of a date object. In this example to 2020
 const d = new Date();
 console.log(d.setFullYear(2020));
 ```
+
+#                                                 JAVASCRIPT RANDOM
+
+**Math.random()**
+
+Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive)
+```bash
+
+let randomNumber = Math.random();
+console.log(randomNumber); // Output: A random number between 0 and 1 (e.g., 0.3789)
+
+```
+
+**JavaScript Random Integers**
+
+Math.random() used with Math.floor() can be used to return random integers.
+
+```bash
+let randomNumber = Math.floor(Math.random());
+console.log(randomNumber); // Output: 0 or 1 (randomly)
+```
+**A random integer between 0 and 100 (e.g., 37)**
+```bash
+let randomNumber = Math.floor(Math.random() * 101);
+console.log(randomNumber); // Output: A random integer between 0 and 100 (e.g., 37)
+```
+**A Proper Random Function**
+```bash
+function getRndInteger(min, max) {
+  min = Math.ceil(min);  // Round up the minimum value
+  max = Math.floor(max);  // Round down the maximum value
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Generate a random integer between 10 and 20 (inclusive)
+let randomNumber = getRndInteger(10, 20);
+
+console.log("Random integer between 10 and 20:", randomNumber);
+```
+
+#                                                  JAVASCRIPT BOOLEANS
+
+**The Boolean() Function**
+
+You can use the Boolean() function to find out if an expression (or a variable) is true:
+
+```BASH
+console.log(Boolean(10 > 9)); // Output: true
+```
+**Everything With a "Value" is True**
+
+console.log("100 is " + Boolean(100) + "<br>");
+console.log("3.14 is " + Boolean(3.14) + "<br>");
+console.log("-15 is " + Boolean(-15) + "<br>");
+console.log("Any (not empty) string is " + Boolean("Hello") + "<br>");
+console.log("Even the string 'false' is " + Boolean('false') + "<br>");
+console.log("Any expression (except zero) is " + Boolean(1 + 7 + 3.14));
+
+**Everything Without a "Value" is False**
+
+The Boolean value of 0 (zero) is false:
+The Boolean value of -0 (minus zero) is false
+The Boolean value of "" (empty string) is false:
+The Boolean value of undefined is false:
+The Boolean value of null is false:
+The Boolean value of false is (you guessed it) false:
+The Boolean value of NaN is false:
+
+#                                              JavaScript Comparison and Logical Operators
+
+**Comparison Operators**
+**==equal to** 
+Given that x = 5, the table below explains the comparison operators:
+ ```bash
+ let x = 8;
+ let y = x == 8;
+console.log(y);
+```
+```bash
+ let x = 5;
+ let y = x == 5;
+ console.lgo(y);
+ ```
+ ```bash
+ let x = '5';
+ let y = x == 5;
+ console.log(y); 
+```
+**equal valuea and equal type ===**
+ 	x === 5	true
+  x === '5'	false
+
+**!=	not equal	x != 8**	true	
+**!==	not equal value or not equal type	x !== 5**	false	
+**x !== "5"	true**	
+**x !== 8**	true	
+**>	greater than	x > 8**	false	
+**<	less than	x < 8**	true	
+**>=	greater than or equal to	x >= 8**	false	
+**<=	less than or equal to	x <= 8**	true	
+  
+**Logical Operators**
+Logical operators are used to determine the logic between variables or values.
+
+Given that x = 6 and y = 3, the table below explains the logical operators:
+
+**&&	and	(x < 10 && y > 1)** is true	
+**||	or	(x == 5 || y == 5)** is false	
+**!	not	!(x == y)** is true
+
+**The Nullish Coalescing Operator (??)**
+The ?? operator returns the first argument if it is not nullish (null or undefined).
+
+Otherwise it returns the second argument.
+
+**The Optional Chaining Operator (?.)**
+The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).
+
+**Conditional (Ternary) Operator**
+JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.
+
+Syntax
+variablename = (condition) ? value1:value2
+```bash
+function myFunction(age) {
+  // Handle potential missing age argument (assuming default is 18)
+  age = typeof age === 'undefined' ? 18 : age;
+  let voteable = (age < 18) ? "Too young" : "Old enough";
+  return voteable + " to vote.";
+}
+
+// Example usage (assuming you have a way to call the function)
+let voteMessage = myFunction(25);
+console.log(voteMessage); // Output: "Old enough to vote."
+```
+
+#                                                 JavaScript if, else, and else if
+
+
+Conditional statements are used to perform different actions based on different conditions.
+
+Conditional Statements
+Very often when you write code, you want to perform different actions for different decisions.
+
+You can use conditional statements in your code to do this.
+
+In JavaScript we have the following conditional statements:
+
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+
+**The if Statement**
+Use the if statement to specify a block of JavaScript code to be executed if a condition is true.
+```bash
+// Get the current hour
+let currentHour = new Date().getHours();
+
+// Check the condition using an if statement
+if (currentHour < 18) {
+  console.log("Good day!"); // Replace with your desired output logic (no console in pure JS)
+} else {
+  console.log("Good Evening!"); // Optional: Evening message for other times (no console)
+}
+```
+**The else Statement**
+
+Use the else statement to specify a block of code to be executed if the condition is false.
+
+```bash
+const hour = new Date().getHours();
+let greeting;
+
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+// Replace this line with your desired output logic (e.g., console.log or store in a variable)
+console.log(greeting);
+```
+
+**The else if Statement**
+
+Use the else if statement to specify a new condition if the first condition is false.
+```bash
+// Get the current hour
+const time = new Date().getHours();
+
+// Determine the greeting based on the hour
+let greeting;
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+
+console.log(greeting);
+```
+#                                               javascript switch statement
+
+The switch statement is used to perform different actions based on different conditions.
+This is how it works:
+
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+If there is no match, the default code block is executed.
+
+The getDay() method returns the weekday as a number between 0 and 6.
+
+(Sunday=0, Monday=1, Tuesday=2 ..)
+
+This example uses the weekday number to calculate the weekday name:
+```bash
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+    break;
+}
+console.log("Today is " + day);
+```
+
+**The break Keyword**
+
+When JavaScript reaches a break keyword, it breaks out of the switch block.
+
+This will stop the execution inside the switch block.
+
+It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.
+
+
