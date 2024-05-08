@@ -1618,3 +1618,291 @@ This will stop the execution inside the switch block.
 It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.
 
 
+#                                                   JAVASCRIPT FOR IN 
+
+**The For In Loop**
+The JavaScript for in statement loops through the properties of an Object:
+
+```BASH
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+console.log(txt);
+```
+
+**For In Over Arrays**
+
+The JavaScript for in statement can also loop over the properties of an Array:
+
+```bash
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x] + "\n"; 
+}
+
+console.log(txt);
+```
+
+**Array.forEach()**
+
+The forEach() method calls a function (a callback function) once for each array element.
+
+```BASH
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt += value + "\n"; 
+}
+
+console.log(txt);
+```
+
+#                                                   JAVASCRIPT FOR OF
+
+
+**The For Of Loop**
+
+The JavaScript for of statement loops through the values of an iterable object.
+
+It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+
+variable - For every iteration the value of the next property is assigned to the variable. Variable can be declared with const, let, or var.
+
+iterable - An object that has iterable properties.
+
+**Looping over an Array**
+```bash
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x + "\n";
+}
+
+console.log(text);
+```
+**Looping over a string**
+```bash
+let language = "JavaScript";
+
+let text = "";
+for (let x of language) {
+  text += x + "\n";
+}
+
+console.log(text);
+```
+
+#                                              Javascript while loop
+
+
+Loops can execute a block of code as long as a specified condition is true.
+
+```bash
+let text = "";
+let i = 0;
+while (i < 10) {
+  text += "\nThe number is " + i;
+  i++;
+}
+console.log(text);
+```
+**The Do While Loop**
+
+The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+```bash
+let text = "";
+let i = 0;
+do {
+  text += "\nThe number is " + i;
+  i++;
+} while (i < 10);  
+
+console.log(text);
+```
+#                                                       JavaScript Break and Continue
+
+
+
+The break statement "jumps out" of a loop.
+
+The continue statement "jumps over" one iteration in the loop.
+
+**The Break Statement**
+
+You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch() statement.
+
+The break statement can also be used to jump out of a loop.
+
+```bash
+let text = "";
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { break; }
+  text += "The number is " + i + "\n";
+}
+
+console.log(text);
+```
+
+**The Continue Statement**
+
+The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+This example skips the value of 3:
+```bash
+
+let text = "";
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  text += "The number is " + i + "\n";
+}
+console.log(text);
+```
+#                                                         JAVASCRIPT ITERABLES
+
+THE FOR OF LOOP
+ITERATING OVER A STRING
+ITERATING OVER AN ARRAY 
+ITERATING OVER A SET
+ITERATING OVER A MAP
+
+#                                                         JAVASCRIPT SETS
+
+A JavaScript Set is a collection of unique values.
+
+Each value can only occur once in a Set.
+
+The values can be of any type, primitive values or objects.
+
+**The new Set() Method**
+
+Pass an array to the new Set() constructor:
+
+```bash
+const letters = new Set(["a", "b", "c"]);
+
+console.log("The set has " + letters.size + " values.");
+```
+
+**Create a Set and add values:**
+
+const letters = new Set();
+```bash
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+
+console.log("The set has " + letters.size + " values.");
+```
+**Listing the Elements**
+
+You can list all Set elements (values) with a for..of loop:
+```bash
+const letters = new Set(["a", "b", "c"]);
+
+let text = "";
+for (const x of letters) {
+  text += x + "\n";
+}
+
+console.log(text);
+```
+
+
+#                                                       javascript set method
+
+
+**The new Set() Method**
+
+**The add() Method**
+
+**Listing Set Elements**
+
+
+**The has() Method**
+
+The has() method returns true if a specified value exists in a set.
+
+```bash
+const letters = new Set(["a", "b", "c"]);
+
+
+const answer = letters.has("d");
+console.log("The answer is " + answer);
+```
+
+**The forEach() Method**
+
+The forEach() method invokes a function for each Set element:
+
+```bash
+const letters = new Set(["a", "b", "c"]);
+
+let text = "";
+letters.forEach(function(value) {
+  text += value + "\n";
+});
+
+console.log(text);
+```
+
+**The values() Method**
+
+The values() method returns an Iterator object with the values in a Set:
+
+const letters = new Set(["a", "b", "c"]);
+
+```bash
+const myIterator = letters.values();
+
+let text = "";
+for (const x of myIterator) {
+  text += x + "\n";
+}
+
+console.log(text);
+```
+
+**The keys() Method**
+
+The keys() method returns an Iterator object with the values in a Set:
+```bash
+const letters = new Set(["a", "b", "c"]);
+
+
+const myIterator = letters.keys();
+
+
+let text = "";
+for (const x of myIterator) {
+  text += x + "\n";
+}
+
+console.log(text);
+```
+
+**The entries() Method**
+
+The entries() method returns an Iterator with [value,value] pairs from a Set.
+```bash
+const letters = new Set(["a", "b", "c"]);
+
+const myIterator = letters.entries();
+
+let text = "";
+for (const entry of myIterator) {
+  text += entry + "\n";
+}
+
+console.log(text);
+```
